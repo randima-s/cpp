@@ -1,15 +1,17 @@
 #include<iostream>
 #include<regex>
 
+using namespace std;
+
 int main() {
-	std::string s = "<div class=a id=b>abc </div>";
-	std::smatch m;
-	std::regex r("class[ ]*=[ ]*[A-Za-z]");
+	string s = "<div class=a id=b>abc </div>";
+	smatch m;
+	regex r("class[ ]*=[ ]*[A-Za-z]");
 	
-	std::regex_search(s, m, r);
+	regex_search(s, m, r);
 
 	for (auto x : m) {
-		std::cout << x << std::endl;
+		cout << x << endl;
 	}
 
 	return 0;
